@@ -1,0 +1,13 @@
+Exercícios .filter()
+    new Set() → Cria um conjunto (Set), uma estrutura de dados que armazena valores únicos, ou seja, sem duplicatas.
+   
+    new Date() → Cria um objeto de data e hora no JavaScript. Pode ser usado para obter a data e hora atuais ou criar uma data específica.
+    A expressão new Date(${data}T00:00:00) cria um objeto Date em JavaScript a partir de uma string de data no formato ISO 8601.
+
+    Como funciona?
+    ${data} → Insere a data dinâmica (exemplo: "2024-02-10")
+    T00:00:00 → Adiciona o horário meia-noite (00:00:00) no fuso local
+    new Date(...) → Converte a string para um objeto Date
+    
+    getMonth() → Retorna o número do mês (de 0 a 11) de um objeto Date. Janeiro é 0, fevereiro é 1, e assim por diante.
+
