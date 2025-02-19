@@ -33,9 +33,9 @@
 //     { nome: "Boné", preco: 40 }
 // ];
 
-// const produtosCaros = produtos.filter((produto) => produto.preco > 50);
+// const produtosCaros = produtos.filter(({ preco }) => preco > 50);
 // console.log("Produtos que custam mais de R$50: ");
-// produtosCaros.forEach((produto) => console.log(`Produto: ${produto.nome} || Preço:R$ ${produto.preco},00`));
+// produtosCaros.forEach(({ nome, preco }) => console.log(`Produto: ${nome} || Preço:R$ ${preco},00`));
 
 // Exercício - 05
 // const palavras = ["Abacaxi", "banana", "Ameixa", "uva", "abóbora", "abacate"];
@@ -46,10 +46,8 @@
 
 // Exercício - 06  - REVISAR
 // const numeros = [10, 20, 30, 40, 50];
-// let soma = 0;
-// for (let numero of numeros) soma += numero;
-// const media = soma / numeros.length;
-// const maiores = numeros.filter((numero) => numero > media);
+// const media = (n) => n.reduce((soma, numero) => soma += numero, 0) / numeros.length.toFixed(2);
+// const maiores = numeros.filter((numero) => numero > media(numeros));
 // console.log(maiores);
 
 
@@ -77,9 +75,9 @@
 // ];
 
 // const TI = new Set (["Programador", "Desenvolvedor Web"]);
-// const pessoasTI = funcionarios.filter((funcionario) => ((TI.has(funcionario.profissao)) && funcionario.idade > 25));
+// const pessoasTI = funcionarios.filter(({ profissao, idade }) => ((TI.has(profissao)) && idade > 25));
 // console.log(`Pessoas que são da área da TI e possuem mais de 25 anos: (${pessoasTI.length})`);
-// pessoasTI.forEach((pessoa) => console.log(`Nome: ${pessoa.nome} || Profissão: ${pessoa.profissao} || Idade: ${pessoa.idade}`));
+// pessoasTI.forEach(({ nome, profissao, idade }) => console.log(`Nome: ${nome} || Profissão: ${profissao} || Idade: ${idade}`));
 
 
 // Exercício - 09 
@@ -102,9 +100,9 @@
 //     { titulo: "Duna", ano: 2021, nota: 8.3 }
 // ];
 
-// const lancamentos = filmes.filter((filme) => filme.ano > 2010)
+// const lancamentos = filmes.filter(({ ano }) => ano > 2010)
 // console.log(`Foram encontrados ${lancamentos.length} lançados após o ano de 2010.`)
-// lancamentos.forEach((filme) => console.log(`Nome do filme: ${filme.titulo} || Ano de lançamento: ${filme.ano} || Nota: ${filme.nota}`));
+// lancamentos.forEach(({ titulo, ano, nota }) => console.log(`Nome do : ${titulo} || Ano de lançamento: ${ano} || Nota: ${nota}`));
 
 
 
